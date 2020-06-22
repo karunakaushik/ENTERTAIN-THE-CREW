@@ -1,0 +1,7 @@
+.container{
+    display: flex;
+    height: 100vh;
+    color: white;
+    justify-content: space-around;
+    background-color: navy;
+}
