@@ -5,3 +5,45 @@
     justify-content: space-around;
     background-color: navy;
 }
+.instructionDiv{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+.instructionDiv h1{
+    text-align: center;
+}
+
+.gameDiv{
+    width: 33%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.gameBox{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.gameDiv h1{
+    text-align: center;
+
+}
+.playresouterDiv{
+    width: 33%;
+    /* justify-content: center; */
+    flex-direction: column;
+    display: flex;
+}
+
+@media screen and (max-width:768px){
+
+    .container{
+        flex-direction: column;
+    }
+    .instructionDiv, .gameDiv, .resultDiv{
+        width: 100%;
+    }
+
+}

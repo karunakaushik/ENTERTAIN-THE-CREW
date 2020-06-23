@@ -1,0 +1,17 @@
+.tileDiv{
+    width: 30%;
+    height: 90px;
+    font-size: 60px;
+    border: 2px solid navy;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tileDiv p{
+    margin: 0;
+    text-align: center;
+}

@@ -1,0 +1,15 @@
+.hidden{
+    display: none;
+}
+.resultShow{
+    height: 20vh;
+    text-align: center;
+    font-size: 30px;
+    font-family: Lato;
+}
+.players{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+}
