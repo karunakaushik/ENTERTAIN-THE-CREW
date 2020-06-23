@@ -1,0 +1,18 @@
+.resetDiv{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+.newgameButton{
+    border: none;
+    width: 168px;
+    color: navy;
+    background-color: white;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: 0 !important;
+
+}
