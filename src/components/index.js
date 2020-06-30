@@ -21,10 +21,6 @@ export default class MainPage extends Component{
         }
       }
 
-      // resetTime() {
-      //   this.setState({count: 0});
-      // }
-  
       resetBoard(){
         this.setState({
           gameBoard: [
@@ -120,6 +116,10 @@ export default class MainPage extends Component{
       }
 
     render() {
+      // if (this.state.count == 10) {
+      //   return  <Result winner={this.state.winner} />
+      // }
+      
         return(
             <div className="container">
                 <div className="instructionDiv">
