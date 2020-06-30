@@ -16,9 +16,14 @@ export default class MainPage extends Component{
               ' ',' ',' '
           ],
           winner: null,
-          turn: 'x'
+          turn: 'x',
+          count: 0
         }
       }
+
+      // resetTime() {
+      //   this.setState({count: 0});
+      // }
   
       resetBoard(){
         this.setState({
@@ -28,32 +33,28 @@ export default class MainPage extends Component{
             ' ',' ',' '   
           ],
           winner: null,
-          turn: 'x'
+          turn: 'x',
+          count: 0
         });
       }
 
 
       updateBoard(loc, player) {
-          //Game Over!
       console.log(this.state.winner, this.state.turn, this.state.gameBoard);
       if(this.state.winner !== null) {
-        //make game over component visible
         console.log("Winner", this.state.winner);
         return;
       }
       if(this.state.gameBoard[loc]=== 'x' || this.state.gameBoard[loc]=== 'o'){
-        //invalid move
         return;
       }
       let currentGameBoard = this.state.gameBoard;
       currentGameBoard.splice(loc, 1, this.state.turn);
       this.setState({gameBoard: currentGameBoard}, function(){
-        //Check if there is a winner or draw
         var moves = this.state.gameBoard.join('').replace(/ /g,'');
         console.log('Moves:', moves, 'Winner:', this.state.winner);
         if(moves.length === 9) {
           this.setState({winner: 'd'});
-          //Make game over component visible
           return;
         } else {
           var topRow = this.state.gameBoard[0] + this.state.gameBoard[1] + this.state.gameBoard[2];
@@ -102,6 +103,22 @@ export default class MainPage extends Component{
        
       }
 
+      componentDidMount() {
+        // this.myInterval = setInterval(() => {
+        //   this.setState(prevState => ({
+        //     count: prevState.count + 1 == 10 ? 0 : null
+        //   }))
+        // }, 1000);
+        setInterval(() => {
+          return this.setState(( state, props) => {
+            return{
+              count : state.count == 10 ? 0 :state.count+1
+            }
+          })
+          
+        }, 1000);
+      }
+
     render() {
         return(
             <div className="container">
@@ -114,6 +131,10 @@ export default class MainPage extends Component{
                 </div>
 
                 <div className="gameDiv">
+                <div className="timerDiv">
+                    Time: {this.state.count}  Seconds &nbsp;&nbsp;
+                    <button className="restartButton" onClick={this.resetBoard.bind(this)}>Restart</button>
+                  </div>
                 <div className="resultShow">
                     <Result winner={this.state.winner} />
                     </div>
@@ -136,11 +157,11 @@ export default class MainPage extends Component{
                 <div className="playresouterDiv">
                     <div className="players">
                     <div className="robotDiv">
-                        <img src={Robot} /><p>Computer/AI</p>
+                        <img src={Robot} /><p>Computer/AI Or Another Player  </p>
                     </div>
                     <h1>Vs</h1>
                     <div className="humanDiv"> 
-                        <img src={Human} /><p>Player/Human</p>
+                        <img src={Human} /><p >Player / Human</p>
                     </div>
                     </div>
                 </div>
