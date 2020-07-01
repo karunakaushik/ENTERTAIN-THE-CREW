@@ -1,154 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.sfifth-level-menu
-{
-    position: absolute;
-    top: 0;
-    right: -150px;
-    width: 150px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-}
-
-.sfifth-level-menu > li
-{
-    position: relative;
-    height: 60px;
-    width: 300px;
-    background: #999999;
-}
-.sfifth-level-menu > li:hover { background: #CCCCCC; }
-
-.fifth-level-menu
-{
-    position: absolute;
-    top: 0;
-    right: -150px;
-    width: 150px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-}
-
-.fifth-level-menu > li
-{
-    position: relative;
-    height: 120px;
-    width: 300px;
-    background: #999999;
-}
-.fifth-level-menu > li:hover { background: #CCCCCC; }
-
-.fourth-level-menu
-{
-    position: absolute;
-    top: 0;
-    right: -150px;
-    width: 150px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-}
-
-.fourth-level-menu > li
-{
-    position: relative;
-    height: 30px;
-    width: 300px;
-    background: #999999;
-}
-.fourth-level-menu > li:hover { background: #CCCCCC; }
-
-.third-level-menu
-{
-    position: absolute;
-    top: 0;
-    right: -150px;
-    width: 150px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-}
-
-.third-level-menu > li
-{
-    position: relative;
-    height: 30px;
-    width: 200px;
-    background: #999999;
-}
-.third-level-menu > li:hover { background: #CCCCCC; }
-
-.second-level-menu
-{
-    position: absolute;
-    top: 30px;
-    left: 0;
-    width: 150px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-}
-
-.second-level-menu > li
-{
-    position: relative;
-    height: 30px;
-    background: #999999;
-}
-.second-level-menu > li:hover { background: #CCCCCC; }
-
-.top-level-menu
-{
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-.top-level-menu > li
-{
-    position: relative;
-    float: left;
-    height: 30px;
-    width: 150px;
-    background: #999999;
-}
-.top-level-menu > li:hover { background: #CCCCCC; }
-
-.top-level-menu li:hover > ul
-{
-    /* On hover, display the next level's menu */
-    display: inline;
-}
-
-
-/* Menu Link Styles */
-
-.top-level-menu a /* Apply to all links inside the multi-level menu */
-{
-    font: bold 14px Arial, Helvetica, sans-serif;
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 0 0 0 10px;
-
-    /* Make the link cover the entire list item-container */
-    display: block;
-    line-height: 30px;
-}
-.top-level-menu a:hover { color: #000000; }
-</style>
-</head>
-<body>
+import React, { Component } from 'react'
+import './src/css/hints.css'
+export default class Hints extends Component{
+    render() {
+        return(
+            <div className="hintscontainer">
 <h4>Before you implement your strategy, make sure your opponent doesn't make a move to win...</h4>
 <ul class="top-level-menu">
     <li>
@@ -263,9 +118,13 @@
         </ul>
     </li>
 </ul>
+            </div>
+        )
+    }
+}
 
-</body>
-</html>
+
+
 
 
 
