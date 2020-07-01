@@ -5,6 +5,7 @@ import NewGame from './ResetButton'
 import Tile from './sketch';
 import Robot from './src/img/robot.svg'
 import Human from './src/img/human.svg'
+import Hints from './hints';
 export default class MainPage extends Component{
 
     constructor(props){
@@ -108,7 +109,7 @@ export default class MainPage extends Component{
         setInterval(() => {
           return this.setState(( state, props) => {
             return{
-              count : state.count == 10 ? 0 :state.count+1
+              count : state.count == 15 ? 0 :state.count+1
             }
           })
           
@@ -126,7 +127,10 @@ export default class MainPage extends Component{
                     <div>
                     <NewGame reset={this.resetBoard.bind(this)} />
                     </div>
-                    <h1> hints/instruction</h1>
+                    <h1> Hints/instruction</h1>
+                    <div className="hintsDiv">
+                      <Hints />
+                    </div>
 
                 </div>
 
