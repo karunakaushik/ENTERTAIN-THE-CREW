@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.sfifth-level-menu
+{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.sfifth-level-menu > li
+{
+    position: relative;
+    height: 60px;
+    width: 300px;
+    background: #999999;
+}
+.sfifth-level-menu > li:hover { background: #CCCCCC; }
+
+.fifth-level-menu
+{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.fifth-level-menu > li
+{
+    position: relative;
+    height: 120px;
+    width: 300px;
+    background: #999999;
+}
+.fifth-level-menu > li:hover { background: #CCCCCC; }
+
+.fourth-level-menu
+{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.fourth-level-menu > li
+{
+    position: relative;
+    height: 30px;
+    width: 300px;
+    background: #999999;
+}
+.fourth-level-menu > li:hover { background: #CCCCCC; }
+
+.third-level-menu
+{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.third-level-menu > li
+{
+    position: relative;
+    height: 30px;
+    width: 200px;
+    background: #999999;
+}
+.third-level-menu > li:hover { background: #CCCCCC; }
+
+.second-level-menu
+{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.second-level-menu > li
+{
+    position: relative;
+    height: 30px;
+    background: #999999;
+}
+.second-level-menu > li:hover { background: #CCCCCC; }
+
+.top-level-menu
+{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.top-level-menu > li
+{
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 150px;
+    background: #999999;
+}
+.top-level-menu > li:hover { background: #CCCCCC; }
+
+.top-level-menu li:hover > ul
+{
+    /* On hover, display the next level's menu */
+    display: inline;
+}
+
+
+/* Menu Link Styles */
+
+.top-level-menu a /* Apply to all links inside the multi-level menu */
+{
+    font: bold 14px Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+
+    /* Make the link cover the entire list item-container */
+    display: block;
+    line-height: 30px;
+}
+.top-level-menu a:hover { color: #000000; }
+</style>
+</head>
+<body>
+<h4>Before you implement your strategy, make sure your opponent doesn't make a move to win...</h4>
+<ul class="top-level-menu">
+    <li>
+        <a href="#">HINTS</a>
+        <ul class="second-level-menu">
+            <li>
+                <a href="#">First Player</a>
+                <ul class="third-level-menu">
+                    <li>
+                        <a href="#">You chose corner</a>
+                        <ul class="fourth-level-menu">
+                            <li>
+                                <a href="#">Opponent chose nearest edge</a>
+                                <ul class="fifth-level-menu">
+                                    <li>
+                                        <a href="#">Select the non-diagonal corner farthest to the tile opponent chose and then the diagonal corner</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>   
+                                <a href="#">Opponent chose farthest edge</a>
+                                <ul class="fifth-level-menu">
+                                    <li>
+                                        <a href="#">Select any non-diagonal corner and then the usual V strategy - 135 or 139 forms</a>
+                                    </li>
+                                </ul>
+                            </li> 
+                            <li>
+                                <a href="#">Opponent chose diagonal corner</a>
+                                <ul class="fifth-level-menu">
+                                    <li>
+                                        <a href="#">Select any corner and then the other corner</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Opponent chose non-diagonal corner</a>
+                                <ul class="fifth-level-menu">
+                                    <li>
+                                        <a href="#">Select the corner diagonal to the tile opponent chose and then the other corner</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Opponent chose center</a>
+                                <ul class="fifth-level-menu">
+                                    <li>
+                                        <a href="#">Select the diagonally opposite corner. If opponent chooses a corner, select other corner. If the opponent doesn't choose another corner, it will result a tie.</a>
+                                    </li>
+                                </ul> 
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">You chose center</a>
+                        <ul class="fourth-level-menu">
+                            <li>
+                                <a href="#">Opponent chose edge</a>
+                                <ul class="fifth-level-menu">
+                                    <li>
+                                        <a href="#">Select the corner farthest to tile opponent chose</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>    
+                                <a href="#">Opponent chose corner</a><ul class="fifth-level-menu">
+                                    <li>
+                                        <a href="#">Select the corner diagonal to the tile opponent chose. If the opponent chooses another corner, it will result in a TIE. If the opponent doesn't choose another corner, you could select one.</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">You chose edge</a>
+                        <ul class="fourth-level-menu">
+                            <li>
+                                <a href="#">No strategies</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Second Player</a>
+                <ul class="third-level-menu">
+                    <li>
+                        <a href="#">Opponent chose corner</a>
+                        <ul class="sfifth-level-menu">
+                            <li>
+                                <a href="#">Select center and obstruct winning chances of opponent</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Opponent chose center</a>
+                        <ul class="sfifth-level-menu">
+                            <li>
+                                <a href="#">Select corner and obstruct winning chances of opponent</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Opponent chose edge</a>
+                        <ul class="sfifth-level-menu">
+                            <li>
+                                <a href="#">No strategies</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+</body>
+</html>
+
+
+
+
+
+
