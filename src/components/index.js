@@ -35,13 +35,13 @@ export default class MainPage extends Component{
         });
       }
 
-      // tie(board) {
-      //   var moves = board.join('').replace(/ /g, '');
-      //   if (moves.length === 9) {
-      //     return "tie";
-      //   }
-      //   return false;
-      // }
+      tie(board) {
+        var moves = board.join('').replace(/ /g, '');
+        if (moves.length === 9) {
+          return true;
+        }
+        return false;
+      }
 
 
       updateBoard(loc, player) {
@@ -59,7 +59,7 @@ export default class MainPage extends Component{
         var moves = this.state.gameBoard.join('').replace(/ /g,'');
         console.log('Moves:', moves, 'Winner:', this.state.winner);
         if(moves.length === 9) {
-          this.setState({winner: this.state.winner});
+          this.setState({winner:"Noone"});
           return;
         } else {
           var topRow = this.state.gameBoard[0] + this.state.gameBoard[1] + this.state.gameBoard[2];

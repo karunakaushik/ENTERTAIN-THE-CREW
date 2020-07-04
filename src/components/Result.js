@@ -7,9 +7,11 @@ export default class Result extends Component {
       <>
       <div className={this.props.winner ? 'visible' : 'hidden'}>
         <h2>Game Over</h2>
-        <h2>Player {this.props.winner} is the winner. </h2>  
+        <h2>{this.props.winner} is the winner. </h2>  
       </div>
-       
+      {/* <div className={this.props.winner ? 'visible' : 'hidden'}>
+        <h2>Tie</h2>
+        </div> */}
      </>
     )
   }
