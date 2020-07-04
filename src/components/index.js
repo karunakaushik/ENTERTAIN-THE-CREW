@@ -35,6 +35,14 @@ export default class MainPage extends Component{
         });
       }
 
+      // tie(board) {
+      //   var moves = board.join('').replace(/ /g, '');
+      //   if (moves.length === 9) {
+      //     return "tie";
+      //   }
+      //   return false;
+      // }
+
 
       updateBoard(loc, player) {
       console.log(this.state.winner, this.state.turn, this.state.gameBoard);
@@ -51,7 +59,7 @@ export default class MainPage extends Component{
         var moves = this.state.gameBoard.join('').replace(/ /g,'');
         console.log('Moves:', moves, 'Winner:', this.state.winner);
         if(moves.length === 9) {
-          this.setState({winner: 'd'});
+          this.setState({winner: this.state.winner});
           return;
         } else {
           var topRow = this.state.gameBoard[0] + this.state.gameBoard[1] + this.state.gameBoard[2];
@@ -101,11 +109,6 @@ export default class MainPage extends Component{
       }
 
       componentDidMount() {
-        // this.myInterval = setInterval(() => {
-        //   this.setState(prevState => ({
-        //     count: prevState.count + 1 == 10 ? 0 : null
-        //   }))
-        // }, 1000);
         setInterval(() => {
           return this.setState(( state, props) => {
             return{
@@ -117,10 +120,7 @@ export default class MainPage extends Component{
       }
 
     render() {
-      // if (this.state.count == 10) {
-      //   return  <Result winner={this.state.winner} />
-      // }
-      
+
         return(
             <div className="container">
                 <div className="instructionDiv">
@@ -142,7 +142,7 @@ export default class MainPage extends Component{
                 <div className="resultShow">
                     <Result winner={this.state.winner} />
                     </div>
-
+                     <br />
                     <h1> Tic Tac Toe</h1>
                     <div className="gameBox">
                     {this.state.gameBoard.map(function(value, i){
