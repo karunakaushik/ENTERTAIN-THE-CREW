@@ -35,13 +35,13 @@ export default class MainPage extends Component{
         });
       }
 
-      tie(board) {
-        var moves = board.join('').replace(/ /g, '');
-        if (moves.length === 9) {
-          return true;
-        }
-        return false;
-      }
+      // tie(board) {
+      //   var moves = board.join('').replace(/ /g, '');
+      //   if (moves.length === 9) {
+      //     return true;
+      //   }
+      //   return false;
+      // }
 
 
       updateBoard(loc, player) {
