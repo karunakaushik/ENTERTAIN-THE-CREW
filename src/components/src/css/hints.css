@@ -17,9 +17,9 @@
     height: 60px;
     width: 300px;
     color: white;
-    background: #999999;
+    background: #028910;
 }
-.sfifth-level-menu > li:hover { background: #CCCCCC; }
+.sfifth-level-menu > li:hover { background: linear-gradient(45deg, #03AC13, transparent); }
 
 .fifth-level-menu
 {
@@ -40,9 +40,9 @@
     height: 120px;
     color: white;
     width: 300px;
-    background: #999999;
+    background: #028910;
 }
-.fifth-level-menu > li:hover { background: #CCCCCC; }
+.fifth-level-menu > li:hover { background: linear-gradient(45deg, #03AC13, transparent); }
 
 .fourth-level-menu
 {
@@ -63,9 +63,9 @@
     height: 30px;
     color: white;
     width: 300px;
-    background: #999999;
+    background: #028910;
 }
-.fourth-level-menu > li:hover { background: #CCCCCC; }
+.fourth-level-menu > li:hover { background: linear-gradient(45deg, #03AC13, transparent); }
 
 .third-level-menu
 {
@@ -86,9 +86,9 @@
     height: 30px;
     color: white;
     width: 200px;
-    background: #999999;
+    background: #028910;
 }
-.third-level-menu > li:hover { background: #CCCCCC; }
+.third-level-menu > li:hover { background: linear-gradient(45deg, #03AC13, transparent); }
 
 .second-level-menu
 {
@@ -108,14 +108,15 @@
     position: relative;
     color: white;
     height: 30px;
-    background: #999999;
+    background: #028910;
 }
-.second-level-menu > li:hover { background: #CCCCCC; }
+.second-level-menu > li:hover { background: linear-gradient(45deg, #03AC13, transparent); }
 
 .top-level-menu
 {
     list-style: none;
     color: white;
+    border: 1px solid white;
     text-align: center;
     padding: 0;
     margin: 0;
@@ -128,9 +129,9 @@
     color: white;
     height: 30px;
     width: 150px;
-    background: #999999;
+    background: #028910;
 }
-.top-level-menu > li:hover { background: #CCCCCC; }
+.top-level-menu > li:hover { background: linear-gradient(45deg, #03AC13, transparent); }
 
 .top-level-menu li:hover > ul
 {
@@ -140,10 +141,9 @@
 
 
 /* Menu Link Styles */
-
 .top-level-menu a /* Apply to all links inside the multi-level menu */
 {
-    font: bold 14px Arial, Helvetica, sans-serif;
+    font: bold 25px;
     color: white;
     text-decoration: none;
     padding: 0 0 0 10px;
@@ -153,6 +153,7 @@
     line-height: 30px;
 }
 .top-level-menu a:hover { color: #000000; }
+
 .hintscontainer{
     display: flex;
     flex-direction: column;
