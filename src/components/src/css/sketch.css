@@ -1,17 +1,89 @@
-.tileDiv{
-    width: 30%;
-    height: 90px;
-    font-size: 60px;
-    border: 2px solid navy;
-    background-color: white;
-    color: black;
+.boardcontainer{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: 100%;
     align-items: center;
-
 }
 
-.tileDiv p{
-    margin: 0;
-    text-align: center;
+
+.boardcontainer>.boardRow1>.cell.cell-0,
+.boardcontainer>.boardRow1>.cell.cell-1,
+.boardcontainer>.boardRow1>.cell.cell-2 {
+  border-top: none;
 }
+
+.boardcontainer>.boardRow1>.cell.cell-0,
+.boardcontainer>.boardRow2>.cell.cell-3,
+.boardcontainer>.boardRow3>.cell.cell-6 {
+  border-left: none;
+}
+
+.boardcontainer>.boardRow3>.cell.cell-6,
+.boardcontainer>.boardRow3>.cell.cell-7,
+.boardcontainer>.boardRow3>.cell.cell-8 {
+  border-bottom: none;
+}
+
+.boardcontainer>.boardRow1>.cell.cell-2,
+.boardcontainer>.boardRow2>.cell.cell-5,
+.boardcontainer>.boardRow3>.cell.cell-8 {
+  border-right: none;
+}
+
+.boardcontainer>.boardRow1>.cell {
+    flex: 1 1;
+    padding-top: calc(100% / 6 - 2.9rem);
+    padding-bottom: calc(100% / 6 - 2.9rem);
+    font-size: 90px;
+    line-height: 5.7rem;
+    color: navy;
+    width: 90px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #fff;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+.boardcontainer>.boardRow2>.cell {
+    flex: 1 1;
+    padding-top: calc(100% / 6 - 2.9rem);
+    padding-bottom: calc(100% / 6 - 2.9rem);
+    font-size: 90px;
+    width: 90px;
+    line-height: 5.7rem;
+    background-color: transparent;
+    color: navy;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border: 2px solid #fff;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+.boardcontainer>.boardRow3>.cell {
+    flex: 1 1;
+    padding-top: calc(100% / 6 - 2.9rem);
+    padding-bottom: calc(100% / 6 - 2.9rem);
+    font-size: 90px;
+    width: 90px;
+    line-height: 5.7rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: navy;
+    outline: none;
+    border: 2px solid #fff;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+.boardcontainer>.boardRow1>.cell.done {
+    color: #fff;
+}
+.boardcontainer>.boardRow2>.cell.done {
+    color: #fff;
+}
+.boardcontainer>.boardRow3>.cell.done {
+    color: #fff;
+  }

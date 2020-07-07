@@ -2,41 +2,85 @@
     display: flex;
     height: 100vh;
     color: white;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     background-color: navy;
 }
-.instructionDiv{
-    width: 33%;
+.headerDiv{
     display: flex;
     flex-direction: column;
+    width: 100%;
     /* justify-content: center; */
-}
-.instructionDiv h1{
-    text-align: center;
-}
+    align-items: center;
 
-.gameDiv{
-    width: 33%;
-    justify-content: center;
+}
+.headerDiv h1{
+    font-size: 40px;
+}
+.playersDiv{
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.playersBox{
+    display: flex;
+    /* padding: 0px 80px 0px 0px; */
     flex-direction: column;
+    align-items: baseline;
+}
+.playerinnerBox{
+    display: flex;
+    align-items: baseline;
+}
+.humanplayers>li {
+    list-style-type: none;
+    font-size: 20px;
+    border: 1px solid white;
+    padding: 10px;
+    cursor: pointer;
+}
+.humanplayers, .computerVS{
+    padding: 0px 30px;
+}
+.humanplayers li:hover{
+    background: linear-gradient(45deg, black, transparent);
+}
+.computerVS li:hover{
+    background: linear-gradient(45deg, black, transparent);
+}
+.computerVS>li {
+    list-style-type: none;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 10px;
+}
+.newgameButton button{
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 10px 50px;
+    color: white;
+    outline: 0 !important;
+    background-color: transparent;
+} 
+.newgameButton button:hover{
+    background: linear-gradient(45deg, black, transparent);
 }
 .gameBox{
     display: flex;
-    flex-wrap: wrap;
-
-}
-.gameDiv h1{
-    text-align: center;
-
-}
-
-.playresouterDiv{
-    width: 33%;
-    /* justify-content: center; */
     flex-direction: column;
-    display: flex;
+    align-items: center;
+    padding: 0px 70px 0px 70px;;
 }
+.info{
+    padding: 60px 0px;
+    font-size: 30px;
+}  
+
 
 @media screen and (max-width:768px){
 
@@ -46,11 +90,36 @@
         align-items: center;
         padding: 10px 20px;
     }
+    .playersDiv{
+        flex-direction: column;
+    }
+    .playersBox{
+        padding: 0;
+    }
     .instructionDiv, .gameDiv, .resultDiv{
         width: 100%;
     }
     .gameBox{
         justify-content: center;
+        padding: 20px 0px 0px 0px;
+    }
+    .humanplayers, .computerVS{
+        padding: 0;
     }
 
+}
+
+@media screen and (min-width:769px) and (max-width:977px){
+    .humanplayers, .computerVS{
+        padding: 0;
+    }
+    .playersBox{
+        padding: 0;
+    }
+    .gameBox{
+        padding: 0;
+    }
+    .container{
+        height: fit-content;
+    }
 }
