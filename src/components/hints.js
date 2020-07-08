@@ -117,17 +117,22 @@ export default class Hints extends Component{
             </li>
         </ul>
     </li>
+    <li>
+        <a href="#">INSTRUCTIONS</a>
+        <ul class="fifth-level-menu">
+            <li>
+                <a href="#">If you are X, your opponent is O. Players take turns putting their marks in empty squares.</a>
+            </li>
+            <li>
+                <a href="#">The first player to get 3 of their marks in a row (vertical, across, or diagonally) is the winner.</a>
+            </li>
+            <li>
+                <a href="#">When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.</a>
+            </li>
+        </ul>
+    </li>
 </ul>
-            </div>
+</div>
         )
     }
 }
-
-
-
-
-
-
-
-
-
