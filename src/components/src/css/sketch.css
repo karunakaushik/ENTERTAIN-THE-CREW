@@ -4,7 +4,95 @@
     width: 100%;
     align-items: center;
 }
+/* Drawing lines */
+.boardcontainer {
+  position: relative;
+}
 
+.boardcontainer::after {
+  content: '';
+  position: absolute;
+  background-color: red;
+  transition: 0.7s;
+}
+/* Horizontal line */
+.boardcontainer.h::after {
+  width: 0%;
+  height: 3px;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.boardcontainer.h.full::after {
+  width: 100%;
+}
+
+.boardcontainer.h0::after {
+  top: calc(100% / 6);
+}
+
+.boardcontainer.h1::after {
+  top: 50%;
+}
+
+.boardcontainer.h2::after {
+  top: calc(5 * 100% / 6);
+}
+
+/* Vertical Lines */
+
+.boardcontainer.v::after {
+  height: 0%;
+  width: 3px;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.boardcontainer.v.full::after {
+  height: 100%;
+}
+
+.boardcontainer.v0::after {
+  left: calc(100% / 6);
+}
+
+.boardcontainer.v1::after {
+  left: 50%;
+}
+
+.boardcontainer.v2::after {
+  left: calc(5 * 100% / 6);
+}
+
+/* Diagonal Lines */
+
+.boardcontainer.d0::after {
+  height: 0%;
+  width: 3px;
+  left: 0;
+  top: 0;
+  transform: rotateZ(-45deg);
+  transform-origin: 50% 0;
+  transition: height 0.7s;
+}
+
+.boardcontainer.d0.full::after {
+  height: 140%;
+}
+
+.boardcontainer.d1::after {
+  height: 0%;
+  width: 3px;
+  right: 0;
+  top: 0;
+  transform: rotateZ(45deg);
+  transform-origin: 50% 0;
+  transition: height 0.7s;
+}
+
+.boardcontainer.d1.full::after {
+  height: 140%;
+}
 
 .boardcontainer>.boardRow1>.cell.cell-0,
 .boardcontainer>.boardRow1>.cell.cell-1,

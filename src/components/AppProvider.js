@@ -5,7 +5,7 @@ import {
   findBestMove, findRandomMove
 } from './minimax';
 
-const THINKING_TIME = 500;
+const THINKING_TIME = 1000;
 
 export const AppContext = React.createContext();
 
@@ -90,6 +90,7 @@ export default class AppProvider extends Component {
     if (this.state.gameState.position === "" && this.state.cells[index] === null &&
       (this.state.gameType === TYPES_OF_GAME.HUMAN_PLAYERS || this.state.playerTurn === PLAYER_TURNS.HUMAN)) {
 
+        
       this.setState(prevState => {
         return this.applyState(prevState, index);
       }, () => {
@@ -103,15 +104,38 @@ export default class AppProvider extends Component {
           }, THINKING_TIME);
         }
       });
+      
     }
+    
   }
+
+
+  // makeHUMANMove = () => {
+  //   if(this.state.cells[] != null){
+  //     return ;
+  //   }
+  // }
+
 
   computerPlay = (index) => {
     if (this.state.gameState.position === "" && this.state.cells[index] === null &&
       this.state.gameType === TYPES_OF_GAME.VS_COMPUTER &&
       this.state.playerTurn === PLAYER_TURNS.COMPUTER) {
 
-      this.setState(prevState => this.applyState(prevState, index));
+      this.setState(prevState => {
+        return this.applyState(prevState, index);
+      },() => {
+        if (this.state.gameState.position === "" &&
+        this.state.gameType === TYPES_OF_GAME.HUMAN_PLAYERS &&
+        this.state.playerTurn === PLAYER_TURNS.HUMAN){
+
+          
+          setTimeout(() => {
+            this.makeHUMANMove();
+          }, THINKING_TIME);
+
+        }
+      });
     }
   }
 

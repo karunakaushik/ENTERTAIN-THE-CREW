@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
+    /* width: 100%; */
 }
 .playersBox{
     display: flex;
@@ -95,6 +95,8 @@
     }
     .playersBox{
         padding: 0;
+        align-items: center;
+
     }
     .instructionDiv, .gameDiv, .resultDiv{
         width: 100%;
@@ -109,7 +111,7 @@
 
 }
 
-@media screen and (min-width:769px) and (max-width:977px){
+@media screen and (min-width:769px) and (max-width:1030px){
     .humanplayers, .computerVS{
         padding: 0;
     }

@@ -26,7 +26,8 @@ const GameType = (props) => {
 
 class MainPage extends Component {
   render() {
-
+    // var ScorePlayer1 = 0;
+    // var ScorePlayer2 = 0;
     let textInfo = '';
     const currentIconType = this.context.currentIcon;
 
@@ -49,6 +50,7 @@ class MainPage extends Component {
         }
       }
     }
+
     return (
       <div className="container">
       <div className="headerDiv">
