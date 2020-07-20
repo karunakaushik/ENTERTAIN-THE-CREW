@@ -110,11 +110,7 @@ export default class AppProvider extends Component {
   }
 
 
-  // makeHUMANMove = () => {
-  //   if(this.state.cells[] != null){
-  //     return ;
-  //   }
-  // }
+  
 
 
   computerPlay = (index) => {

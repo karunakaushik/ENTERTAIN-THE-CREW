@@ -53,7 +53,7 @@
 }
 
 .boardcontainer.v0::after {
-  left: calc(100% / 6);
+  left: calc(100% /4);
 }
 
 .boardcontainer.v1::after {
@@ -61,7 +61,7 @@
 }
 
 .boardcontainer.v2::after {
-  left: calc(5 * 100% / 6);
+  right: 88px;
 }
 
 /* Diagonal Lines */
@@ -69,7 +69,7 @@
 .boardcontainer.d0::after {
   height: 0%;
   width: 3px;
-  left: 0;
+  left: 45px;
   top: 0;
   transform: rotateZ(-45deg);
   transform-origin: 50% 0;
@@ -83,7 +83,7 @@
 .boardcontainer.d1::after {
   height: 0%;
   width: 3px;
-  right: 0;
+  right: 45px;
   top: 0;
   transform: rotateZ(45deg);
   transform-origin: 50% 0;
