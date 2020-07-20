@@ -49,6 +49,22 @@ class MainPage extends Component {
         }
       }
     }
+    
+//     document.getElementsByClassName("newgameTButton").addEventListener("click", Display);
+//     function Display() {
+//     setInterval(myTimer, 1000);
+//     var count = 0;
+//     function myTimer() {  
+//       if(count != 9) count++;
+//       else{
+//         count = 0;
+//         textInfo = 'Timeout';
+//         // newGame();
+//       }
+//       // document.getElementById("timer").innerHTML = count;
+// }    
+//     }
+    
     return (
       <div className="container">
       <div className="headerDiv">
@@ -70,18 +86,22 @@ class MainPage extends Component {
                         </div>
                     </div>
                   
-             </div>
+                </div>
             
                 <div className="gameBox">
-              <div className="newgameButton">
-                  <button onClick={() => this.context.newGame()}>New Game</button>
-              </div>
-              <div className="info">{textInfo}</div>
-                <Board />
-              </div>
+                  <div className="newgameButton">
+                    <button onClick={() => this.context.newGame()}>New Game</button>
+                  </div>
+                  <div className="newgameTButton">
+                    <button onClick={() => this.context.newGame()}>New Game with Timer</button>
+                    <p id = "timer"></p>
+                  </div>
+                  <div className="info">{textInfo}</div>
+                  <Board />
+                </div>
           </div>
 
-       </div>
+      </div>
       </div>
 
       
