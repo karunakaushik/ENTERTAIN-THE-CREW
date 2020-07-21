@@ -11,5 +11,11 @@ Steps to run the web app:
       2. NPM start
       
 Special Features:
-      1. Hints
+      1. Multiplayer
+      2. Hints
 
+Code Quality:
+
+Size = 344KB
+
+Cyclomatic Complexity Value = 6
