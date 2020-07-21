@@ -106,9 +106,8 @@ class MainPage extends Component {
       <div className="container">
       <div className="headerDiv">
         <h1>Tic Tac Toe</h1>
-
-         <div className="playersDiv">
-                
+        
+         <div className="playersDiv"> 
                 <div className="playersBox">
                      <Hints />
                     <div className="playerinnerBox">
@@ -138,7 +137,9 @@ class MainPage extends Component {
                   <Board />
                 </div>
           </div>
-
+          <p>
+            <a href="https://github.com/N17335H4/ENTERTAIN-THE-CREW.git">View in Github</a>
+          </p> 
       </div>
       </div>
 
