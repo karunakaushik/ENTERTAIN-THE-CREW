@@ -12,11 +12,11 @@ Steps to run the web app on terminal:
       1. NPM install
       2. NPM start
       
-###Special Features:
+### Special Features:
       1. Multiplayer
       2. Hints
 
-###Code Quality:
+### Code Quality:
 
 Size = 344KB
 
