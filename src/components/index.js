@@ -138,7 +138,7 @@ class MainPage extends Component {
                 </div>
           </div>
           <p>
-            <a href="https://github.com/N17335H4/ENTERTAIN-THE-CREW.git">View in Github</a>
+            <a href="https://github.com/N17335H4/ENTERTAIN-THE-CREW.git" target="_blank">View in Github</a>
           </p> 
       </div>
       </div>
