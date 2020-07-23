@@ -41,7 +41,7 @@ class MainPage extends Component {
       return this.setState(( state, props) => {
         return{
           // count : state.count === 10 ? state.count++ : "TimeOut",
-          count : state.count === 10 ? "TimeOut" :state.count++
+          count : state.count === 10 ? "TimeOut" :state.count+1
         }
       })
       
