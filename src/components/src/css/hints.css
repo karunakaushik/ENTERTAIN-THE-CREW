@@ -1,3 +1,45 @@
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background-color: rgba(0,0,0, 0.5);
+  }
+  .popup_inner {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    /* left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%; */
+    overflow-y: scroll;
+    margin: auto;
+    background: cadetblue;
+    text-align: justify;
+    padding: 30px;
+
+  }
+  .hintButton, .instButton , .closeButton{
+      background-color: transparent;
+      color: white;
+      border: 1px solid white;
+      cursor: pointer;
+      padding: 10px 20px;
+      outline: none !important;
+  
+}
+.hintButton:hover { background: linear-gradient(45deg, #03AC13, transparent); }
+.instButton:hover { background: linear-gradient(45deg, #03AC13, transparent); }
+
 .sfifth-level-menu
 {
     position: absolute;
@@ -37,13 +79,35 @@
 .fifth-level-menu > li
 {
     position: relative;
-    height: 120px;
+    height: 150px;
     color: white;
     width: 300px;
     background: #028910;
 }
 .fifth-level-menu > li:hover { background: linear-gradient(45deg, #03AC13, transparent); }
 
+.infifth-level-menu
+{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    color: white;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.infifth-level-menu > li
+{
+    position: relative;
+    height: 120px;
+    color: white;
+    width: 300px;
+    background: #028910;
+}
+.infifth-level-menu > li:hover { background: linear-gradient(45deg, #03AC13, transparent); }
 
 .fourth-level-menu
 {

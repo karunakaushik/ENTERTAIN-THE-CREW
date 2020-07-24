@@ -124,7 +124,7 @@
     padding-bottom: calc(100% / 6 - 2.9rem);
     font-size: 90px;
     line-height: 5.7rem;
-    color: navy;
+    color: cadetblue;
     width: 90px;
     cursor: pointer;
     background-color: transparent;
@@ -142,7 +142,7 @@
     width: 90px;
     line-height: 5.7rem;
     background-color: transparent;
-    color: navy;
+    color: cadetblue;
     cursor: pointer;
     border: none;
     outline: none;
@@ -160,7 +160,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: navy;
+    color: cadetblue;
     outline: none;
     border: 2px solid #fff;
     margin-left: -2px;

@@ -4,9 +4,11 @@ import { TYPES_OF_GAME,  PLAYER_TURNS, ICONS_CHAR} from './minimax';
 import Robot from './src/img/robot.svg'
 import Human from './src/img/human.svg'
 import './src/css/main.css'
+import './src/css/normalize.css'
 import Board from './sketch';
 import Hints from './hints';
-
+import Hints1 from './hints1';
+import Inst from './instruction';
 
 const GameType = (props) => {
     const { value, name } = props;
@@ -38,23 +40,20 @@ class MainPage extends Component {
   }
 
   componentDidMount() {
-    this.timer= setInterval(() => {
+      this.timer = setInterval(() => {
       return this.setState(( state, props) => {
-        if(state.count == 10)  clearInterval(this.timer);
+          if(state.count == 10)  clearInterval(this.timer);
         return{
           count : state.count === 10 ? "TimeOut" :state.count+ 1
-
         }
       })
-      
-    }, 1000);
+    },1000);
   }
 
 
   
 
   render() {
-    
     let textInfo = '';
     const currentIconType = this.context.currentIcon;
 
@@ -78,8 +77,7 @@ class MainPage extends Component {
       }
     }
     
-   
-  
+    
     return (
       <div className="container">
       <div className="headerDiv">
@@ -87,7 +85,10 @@ class MainPage extends Component {
         
          <div className="playersDiv"> 
                 <div className="playersBox">
-                     <Hints />
+                <div className="hintandinst">
+                       <Hints1 />
+                      <Inst /> 
+                    </div>
                     <div className="playerinnerBox">
                         <div className="humanplayers">
                             <img src={Human} alt="Human" />
@@ -129,8 +130,3 @@ class MainPage extends Component {
 MainPage.contextType = AppContext;
 
 export default MainPage;
-
-
-
-
-
