@@ -121,6 +121,9 @@ export default class Hints extends Component{
         <a href="#">INSTRUCTIONS</a>
         <ul class="infifth-level-menu">
             <li>
+                <a href="#">Click the New Game with Timer button only after the Timeout.</a>
+            </li>
+            <li>
                 <a href="#">If you are X, your opponent is O. Players take turns putting their marks in empty squares.</a>
             </li>
             <li>
