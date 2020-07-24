@@ -4,6 +4,7 @@ import { TYPES_OF_GAME,  PLAYER_TURNS, ICONS_CHAR} from './minimax';
 import Robot from './src/img/robot.svg'
 import Human from './src/img/human.svg'
 import './src/css/main.css'
+import './src/css/normalize.css'
 import Board from './sketch';
 import Hints from './hints';
 
