@@ -61,7 +61,7 @@
 }
 
 .boardcontainer.v2::after {
-  right: 88px;
+  right: 40px;
 }
 
 /* Diagonal Lines */
@@ -69,7 +69,7 @@
 .boardcontainer.d0::after {
   height: 0%;
   width: 3px;
-  left: 45px;
+  left: -6px;
   top: 0;
   transform: rotateZ(-45deg);
   transform-origin: 50% 0;
@@ -83,7 +83,7 @@
 .boardcontainer.d1::after {
   height: 0%;
   width: 3px;
-  right: 45px;
+  right: -6px;
   top: 0;
   transform: rotateZ(45deg);
   transform-origin: 50% 0;
